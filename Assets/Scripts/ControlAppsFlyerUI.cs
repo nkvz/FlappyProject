@@ -212,7 +212,7 @@ public class ControlAppsFlyerUI : MonoBehaviour
         {
             new NativeShare()
                .SetUrl(appsFlyerObj.UserInviteLink)
-               .SetText("Hello! " + referrerName + " has invited you to join FlappyDD and get a spacial gift!\nClick on the link to download/open the game:")
+               .SetText("ѕривет! " + referrerName + " я почти победил, помоги! и получи бонус?!)")
                .Share();
         }
         else

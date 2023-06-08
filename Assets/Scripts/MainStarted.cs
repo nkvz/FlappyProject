@@ -66,20 +66,18 @@ public class MainStarted : MonoBehaviour
     public void Started()
     {
         this.gameObject.SetActive(false);
+        pipeSpwan.Started(); //start spawn 
+        playerBehaviour.birdRigidbody.isKinematic = false; //unlock dragon
+        backParalax.inGame = true; //start background
+        playerBehaviour.inGame = true; // lock taps
 
-        pipeSpwan.Started();
-        playerBehaviour.birdRigidbody.isKinematic = false;
-
-        backParalax.inGame = true;
-        playerBehaviour.inGame = true;
-        playerBehaviour.birdRigidbody.velocity = Vector2.up * playerBehaviour.jumpForce;
+        playerBehaviour.birdRigidbody.velocity = Vector2.up * playerBehaviour.jumpForce; //started force
         playerBehaviour.animator.SetTrigger("tap");
 
     }
 
     public void Restart()
     {
-        //SceneManager.LoadScene("Game");
         SceneManager.LoadSceneAsync("Game");
     }
 }
