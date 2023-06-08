@@ -96,7 +96,6 @@ public class ControlAppsFlyerUI : MonoBehaviour
             }
         }
         conversionDataText.text = text;
-        Debug.Log(conversionDataText.text);
     }
     public static void ShowDeepLinkParamsScreen()
     {
