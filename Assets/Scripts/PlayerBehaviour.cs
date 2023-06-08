@@ -10,10 +10,16 @@ public class PlayerBehaviour : MonoBehaviour
     private Animator animator;
     private bool isDead = false;
 
+    public void Awake()
+    {
+        Time.timeScale = 0f;
+    }
+
     private void Start()
     {
         birdRigidbody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        
     }
 
     private void Update()

@@ -12,7 +12,7 @@ public class ControlAppsFlyerUI : MonoBehaviour
     [SerializeField] private AppsFlyerObjectScript appsFlyerObj;
     [SerializeField] private Image deepLinkParamsScreen;
     [SerializeField] private Image conversionDataScreen;
-    [SerializeField] private TMP_Text conversionDataText;
+    [SerializeField] public TMP_Text conversionDataText;
     [SerializeField] private TMP_Text DeepLinkParamsText;
 
     private string _persistentpath = "";

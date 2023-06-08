@@ -20,7 +20,7 @@ public class PipeSpwan : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(3);
 
             GameObject newPipe = Instantiate(pipePrefab, spawnPoint.position, Quaternion.identity, transform);
             GameObject newPipe2 = Instantiate(pipePrefab, spwanPoint2.position, Quaternion.identity, transform);
