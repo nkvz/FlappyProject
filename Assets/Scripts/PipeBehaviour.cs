@@ -9,7 +9,7 @@ public class PipeBehaviour : MonoBehaviour
     private void Start()
     {
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
-        rb.velocity = new Vector2(-1f, rb.velocity.y);
+        rb.velocity = new Vector2(-speed, rb.velocity.y);
     }
     /*
     private void FixedUpdate()
@@ -19,7 +19,7 @@ public class PipeBehaviour : MonoBehaviour
     */
     void FixedUpdate()
     {
-        transform.position += new Vector3(-1f, 0f, 0f) * Time.fixedDeltaTime; // Движение влево
+        transform.position += new Vector3(-speed, 0f, 0f) * Time.fixedDeltaTime; // Движение влево
     }
 
 }

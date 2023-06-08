@@ -54,7 +54,7 @@ public class ControlAppsFlyerUI : MonoBehaviour
         while(callCount < 4)
         {
             ShowConversionDataScreen();
-            Debug.Log($"callCount = {callCount}");
+            //Debug.Log($"callCount = {callCount}");
             callCount++;
             yield return new WaitForSeconds(1f);
         }
