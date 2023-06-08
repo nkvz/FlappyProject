@@ -11,7 +11,7 @@ public class PipeSpwan : MonoBehaviour
     public int score = 0;
 
 
-    private void Start()
+    public void Started()
     {
         StartCoroutine(Spawn());
     }

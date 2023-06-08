@@ -15,6 +15,8 @@ public class ControlAppsFlyerUI : MonoBehaviour
     [SerializeField] public TMP_Text conversionDataText;
     [SerializeField] private TMP_Text DeepLinkParamsText;
 
+    public TMP_Text conversionDataAgain;
+
     private string _persistentpath = "";
     private PlayerData _playerData;
 
@@ -25,6 +27,7 @@ public class ControlAppsFlyerUI : MonoBehaviour
 
     public static Dictionary<string, object> DeepLinkParams { get => _instance.appsFlyerObj.DeepLinkParams; }
 
+    private int callCount = 0;
     private void Awake()
     {
         if (_instance == null)
@@ -40,8 +43,21 @@ public class ControlAppsFlyerUI : MonoBehaviour
 
     void Start()
     {
+        StartCoroutine(ShowConvData());
+
         ShowConversionDataScreen();
         ShowDeepLinkParamsScreen();
+    }
+
+    private IEnumerator ShowConvData()
+    {
+        while(callCount < 4)
+        {
+            ShowConversionDataScreen();
+            Debug.Log($"callCount = {callCount}");
+            callCount++;
+            yield return new WaitForSeconds(1f);
+        }
     }
 
     // Update is called once per frame
@@ -96,6 +112,7 @@ public class ControlAppsFlyerUI : MonoBehaviour
             }
         }
         conversionDataText.text = text;
+        conversionDataAgain.text = text;
     }
     public static void ShowDeepLinkParamsScreen()
     {
